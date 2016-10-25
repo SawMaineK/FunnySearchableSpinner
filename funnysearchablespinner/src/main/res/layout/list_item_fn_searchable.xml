@@ -4,14 +4,15 @@
     android:layout_height="wrap_content">
 
     <TextView
+        android:background="@android:color/white"
         android:id="@+id/txt_fn_searchable_item_name"
         android:textAppearance="@android:style/TextAppearance.Medium"
         android:text="Item"
         android:gravity="center_vertical"
         android:paddingLeft="18dp"
         android:paddingRight="18dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

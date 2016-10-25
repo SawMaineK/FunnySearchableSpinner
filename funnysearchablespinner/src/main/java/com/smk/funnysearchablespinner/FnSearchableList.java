@@ -12,6 +12,7 @@ import android.view.View;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import com.smk.funnysearchablespinner.utils.EndlessRecyclerOnScrollListener;
 import com.smk.funnysearchablespinner.utils.ItemClickSupport;
+import com.smk.funnysearchablespinner.utils.SimpleDividerItemDecoration;
 
 import java.util.ArrayList;
 
@@ -78,6 +79,7 @@ public class FnSearchableList extends AppCompatActivity {
         };
 
         recyclerView.addOnScrollListener(endlessRecyclerOnScrollListener);
+        recyclerView.addItemDecoration(new SimpleDividerItemDecoration(this));
 
         searchView = (MaterialSearchView) findViewById(R.id.search_view);
         searchView.setHint(searchViewTitle);
@@ -85,6 +87,7 @@ public class FnSearchableList extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 if(mOnQueryTextListener != null){
+                    endlessRecyclerOnScrollListener.reset(0,true);
                     mOnQueryTextListener.onQueryTextSubmit(query);
                 }
                 return false;

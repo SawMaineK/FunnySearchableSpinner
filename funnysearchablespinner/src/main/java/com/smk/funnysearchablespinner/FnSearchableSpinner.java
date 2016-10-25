@@ -30,7 +30,7 @@ public class FnSearchableSpinner extends Spinner implements View.OnTouchListener
     private OnQueryTextListener mOnQueryTextListener;
     private OnScrollOffsetListener mOnScrollOffsetListener;
     private int visibleItem = 12;
-    private boolean localFilter;
+    private boolean localFilter = true;
 
     public FnSearchableSpinner(Context context) {
         super(context);
